@@ -1,19 +1,14 @@
 import { Negociacao } from './negociacao.js';
 
+
 export class Negociacoes {
-    static adiciona(negociacao: Negociacao) {
-        throw new Error('Method not implemented.');
-    }
-    static lista(): any {
-        throw new Error('Method not implemented.');
-    }
-    private negociacoes: Array<Negociacao> = [];
+    private negociacoes: Negociacao[] = [];
 
     adiciona(negociacao: Negociacao) {
         this.negociacoes.push(negociacao);
     }
 
-    lista(): ReadonlyArray<Negociacao> {
+    lista(): readonly Negociacao[] {
         return this.negociacoes;
     }
 }
